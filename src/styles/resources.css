@@ -1,0 +1,124 @@
+/* Add this CSS to style the upload section */
+
+.upload{
+display: flex;
+justify-content: center;
+/* align-items: center; */
+flex-direction: column;
+ /* border:1px solid red; */
+}
+.upload-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  /* border:1px solid red; */
+  width: 50%;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styles */
+.upload-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Dropdown and button styles */
+.upload-section select,
+.upload-section input[type="file"],
+.upload-section button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.upload-section select:focus,
+.upload-section button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Specific styles for select elements */
+.upload-section select {
+  color: black;
+  /* background: white; */
+}
+
+.upload-section button {
+  background: #4CAF50; /* Green */
+  color: white;
+  cursor: pointer;
+}
+
+/* Add this CSS to style the uploaded PDFs section */
+.uploaded-pdfs-container {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter dropdown styles */
+.filter-select {
+  width: 150px; /* Set a fixed width for consistency */
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.filter-select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none; /* Remove default outline */
+}
+
+/* Styles for the PDF header */
+.pdf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* PDF list styles */
+.pdf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pdf-item {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 4px;
+  color: white;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Add specific styles for the subject dropdown if needed */
+.upload-section select {
+  color: black; /* Ensure text color is readable */
+}
