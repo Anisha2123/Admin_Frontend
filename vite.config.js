@@ -7,7 +7,11 @@ export default defineConfig({
     port: 5173
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    // rollupOptions: {
+    //   external: ["pdfjs-dist/build/pdf.worker.min.js"],
+    // },
+
   },
   base: '/', // Ensures correct routing
 });

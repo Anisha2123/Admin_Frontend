@@ -12,9 +12,10 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
 
-import pdfWorker from "pdfjs-dist/build/pdf.worker.min.js";
+import pdfWorker from "/pdf.worker.min.js?url";
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+
 
 
 const PageContainer = styled.div`
