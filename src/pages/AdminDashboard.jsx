@@ -326,8 +326,8 @@ const AdminDashboard = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/resources/upload",
-        // "https://api.kiitwallah.live/api/resources/upload",
+        // "http://localhost:3001/api/resources/upload",
+        "https://api.kiitwallah.live/api/resources/upload",
         formData,
         {
           // headers: { "Content-Type": "multipart/form-data" },
@@ -385,8 +385,8 @@ const AdminDashboard = () => {
 
   const fetchPdfs = async () => {
     try {
-      // const response = await axios.get("https://api.kiitwallah.live/api/resources/pdfs", {
-        const response = await axios.get("http://localhost:3001/api/resources/pdfs", {
+      const response = await axios.get("https://api.kiitwallah.live/api/resources/pdfs", {
+        // const response = await axios.get("http://localhost:3001/api/resources/pdfs", {
         params: { 
           branch: selectedBranch, 
           semester: selectedSemester, 
@@ -405,7 +405,8 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
   
     try {
-      await axios.delete("http://localhost:3001/api/resources/delete", {
+      // await axios.delete("http://localhost:3001/api/resources/delete", {
+        await axios.delete("https://api.kiitwallah.live/api/resources/delete", {
         params: { 
           pdfName, 
           branch: selectedBranch, 
@@ -427,7 +428,8 @@ const AdminDashboard = () => {
   };
   const handleSaveEdit = async (oldName) => {
     try {
-      await axios.put("http://localhost:3001/api/resources/rename", { 
+      // await axios.put("http://localhost:3001/api/resources/rename", { 
+        await axios.put("https://api.kiitwallah.live/api/resources/rename", {
         oldName, 
         newName: newPdfName, 
         branch: selectedBranch, 
@@ -528,7 +530,7 @@ const AdminDashboard = () => {
                     </>
                   ) : (
                     <>
-                      <span onClick={() => openPdf(`http://localhost:3001/api/resources${pdf.url}`)}>
+                      <span onClick={() => openPdf(`https://api.kiitwallah.live/api/resources${pdf.url}`)}>
                         {pdf.name}
                       </span>
                       <div style={{ display: 'flex', gap: '0.5rem' }}>
