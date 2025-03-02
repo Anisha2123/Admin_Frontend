@@ -507,7 +507,7 @@ const AdminDashboard = () => {
                     }}
                   />
                 </div>
-                <UploadButton>
+                <UploadButton onClick={handleFileUpload}>
                   Upload PDF
                 </UploadButton>
               </FilterGroup>
