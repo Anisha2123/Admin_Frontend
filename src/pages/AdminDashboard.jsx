@@ -335,7 +335,11 @@ const AdminDashboard = () => {
         }
       );
       console.log("✅ File uploaded successfully:", response.data);
-      alert("File uploaded successfully!");
+      // alert("File uploaded successfully!");
+      setPdfName("");  // ✅ Reset the text field
+      setSelectedPdf(null); // ✅ Clear the selected file
+      document.getElementById("fileInput").value = ""; // ✅ Reset file input
+      fetchPdfs(); // Refresh the list
     } catch (error) {
       console.error("❌ Error uploading file:", error);
       alert("Error uploading file. Check console for details.");
@@ -415,7 +419,7 @@ const AdminDashboard = () => {
           subject: selectedSubject
         }
       });
-      alert("PDF deleted successfully");
+      // alert("PDF deleted successfully");
       fetchPdfs(); // Refresh the list
     } catch (error) {
       console.error("Error deleting PDF:", error);
@@ -437,7 +441,7 @@ const AdminDashboard = () => {
         category: selectedCategory, 
         subject: selectedSubject
       });
-      alert("PDF renamed successfully");
+      // alert("PDF renamed successfully");
       setEditingPdf(null);
       fetchPdfs(); // Refresh list
     } catch (error) {
@@ -499,6 +503,7 @@ const AdminDashboard = () => {
                     onChange={(e) => setPdfName(e.target.value)}
                   />
                   <FileInput
+                  id="fileInput"
                     type="file"
                     accept="application/pdf"
                     onChange={(e) => {
